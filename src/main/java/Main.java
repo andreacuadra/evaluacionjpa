@@ -14,11 +14,9 @@ import models.Client;
             newClient.setPhone("123456789");
             newClient.setRegisterDate("2024-08-10");
 
-            // Save the new client
             clientDao.save(newClient);
             System.out.println("Client saved successfully!");
 
-            // Retrieve and print the client by ID
             Client retrievedClient = clientDao.getClient(newClient.getId());
             if (retrievedClient != null) {
                 System.out.println("Retrieved client: " + retrievedClient.getFullName());
